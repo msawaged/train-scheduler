@@ -6,31 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Train Scheduler</title>
-    <!--Firebase-->
-    
+
+
     <!--jQuery put in body!!-->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
     <!-- Moment.js Reference -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!--CSS-->
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron">
             <h1 class="text-center">Welcome to the Train Station</h1>
-            <h2><i class="fas fa-train"></i></h2>
+            <h2>
+                <i class="fas fa-train"></i>
+            </h2>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading text-center">
                 <h2></h2>
-                <h2 id="currentTime">The current time is: </h2>
+                <h2> The current time :
+                    <span id="current-time"> </span>
+                </h2>
             </div>
         </div>
 
@@ -41,11 +51,16 @@
             <div>
                 <table id="trainTable">
                     <tr>
-                        <th><i class="fas fa-train"></i> Train Name</th>
-                        <th><i class="far fa-paper-plane"></i> Destination</th>
-                        <th id="times"><i class="far fa-clock"></i> Frequency (min)</th>
-                        <th id="times"><i class="far fa-calendar-alt"></i> Next Arrival</th>
-                        <th id="times"><i class="fas fa-stopwatch"></i> Minutes Away</th>
+                        <th>
+                            <i class="fas fa-train" id ="train-names"></i> Train Name</th>
+                        <th>
+                            <i class="far fa-paper-plane"></i> Destination</th>
+                        <th id="times">
+                            <i class="far fa-clock"></i> Frequency (min)</th>
+                        <th id="times">
+                            <i class="far fa-calendar-alt"></i> Next Arrival</th>
+                        <th id="times">
+                            <i class="fas fa-stopwatch"></i> Minutes Away</th>
                     </tr>
                 </table>
             </div>
@@ -59,7 +74,8 @@
                     <form>
                         <label for="trainNameInput">Train Name</label>
                         <br>
-                        <input type="text" class="form-control" name="trName" id="trainNameInput" aria-describedby="TrainFormHelp" placeholder="Chattanooga Choo Choo" required>
+                        <input type="text" class="form-control" name="trName" id="trainNameInput" aria-describedby="TrainFormHelp" placeholder="Chattanooga Choo Choo"
+                            required>
                         <label for="destinationInput">Destination</label>
                         <br>
                         <input type="text" class="form-control" name="trDest" id="destinationInput" placeholder="Chattanooga, TN" required>
@@ -77,9 +93,11 @@
 
             <!--JavaScript-->
             <script src="assets/javascript/javascript.js"></script>
-            <!--Firebase app-->
+            <!-- Firebase app
             <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script> -->
+
+            
 </body>
 
 </html>
